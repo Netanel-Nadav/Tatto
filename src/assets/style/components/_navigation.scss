@@ -1,0 +1,66 @@
+nav {
+    .hamburger {
+        gap: 5px;
+        span {
+            width: 30px;
+            height: 5px;
+            background-color: $clr2;
+            border-radius: 50px;
+        }
+        @include wide-layout {
+            display: none;
+        }
+    }
+    ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        gap: 20px;
+        background-color: $clr1;
+        box-shadow: 0px 0px 10px rgba(0,0,0,1);
+        flex-direction: column;
+        justify-content: center;
+        transition: all 250ms ease-in;
+
+        &.open {
+            right: 0;
+        }
+
+        button {
+            padding: 5px;
+            gap: 10px;
+            border-radius: 100px;
+            .img-container {
+                width: 30px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+
+        .logout-btn {
+            background: none;
+            color: #fff;
+            border: none;
+            box-shadow: unset;
+        }
+
+        @include wide-layout {
+            flex-direction: row;
+            position: relative;
+            width: unset;
+            height: unset;
+            right: unset;
+            box-shadow: unset;
+            background-color: unset;
+            margin-left: auto !important;
+        }
+        li {
+            .active {
+                color: $clr3;
+                font-weight: 600;
+            }
+        }
+    }
+}

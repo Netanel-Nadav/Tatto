@@ -1,0 +1,12 @@
+@mixin normal-layout {
+    @media screen and (min-width: $layout-normal) {
+        @content
+    }
+};
+
+@mixin wide-layout {
+    @media screen and (min-width: $layout-wide) {
+        @content
+    }
+};
+

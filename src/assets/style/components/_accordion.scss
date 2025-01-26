@@ -1,0 +1,30 @@
+.accordion {
+    height: 500px;
+    margin-bottom: 3rem;
+    .accordion-panel {
+        flex-basis: clamp(30px, 5rem, 150px);
+        position: relative;
+        isolation: isolate;
+        transition: flex-grow 500ms;
+        // border-radius: 5px 5px 15px 5px;
+        overflow: hidden;
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 0px 1px #000;
+        img {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+        &[aria-expanded="true"] {
+            flex-grow: 1;
+            // outline: 3px solid $clr2;
+            // outline-offset: 2px;
+        }
+
+        .panel-trigger {
+            display: block;
+            width: 100%;
+            height: 30px;
+        }
+    }
+}

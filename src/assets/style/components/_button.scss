@@ -1,0 +1,58 @@
+.styled-btn {
+    position: relative;
+    border-radius: 100px;
+    font-weight: 600;
+    border: 3px solid $clr1;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 5px 40px;
+    span {
+        background-color: darken($clr3, 10%);
+        display: block;
+        width: 25%;
+        height: 100%;
+        transition: scale 500ms;
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+        &:hover {
+            opacity: 1;
+            scale: 10;
+        }
+    }
+    p {
+        margin: 0 !important;
+        position: relative;
+        isolation: isolate;
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 10px;
+            height: 10px;
+            background-color: darken($clr3, 10%);
+            border-radius: 50%;
+            transition: scale 300ms;
+            opacity: 0;
+            z-index: -1;
+        }
+        &:hover {
+            &::before {
+                scale: 20;
+                opacity: 1;
+            }
+        }
+    }
+
+    :nth-child(1) {
+        left: 0;
+    }
+    :nth-child(3) {
+        right: 0;
+    }
+}
+

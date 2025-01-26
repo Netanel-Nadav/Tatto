@@ -1,0 +1,27 @@
+@import './setup/variables';
+@import './setup/mixins';
+@import './setup/typography';
+
+
+@import './basics/base';
+@import './basics/helpers';
+@import './basics/layout';
+
+
+@import './pages/home';
+@import './pages/signup';
+@import './pages/explore';
+@import './pages/artist-details';
+@import './pages/become-artist';
+
+
+@import './components/navigation';
+@import './components/hero';
+@import './components/artist-preview';
+@import './components/contact-artist';
+@import './components/our-goal.scss';
+@import './components/explore-artists';
+@import './components/accordion';
+@import './components/location-map';
+@import './components/button';
+@import './components/img-slider';

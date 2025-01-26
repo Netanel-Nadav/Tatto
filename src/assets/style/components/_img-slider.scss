@@ -1,0 +1,66 @@
+.img-slider {       
+    min-height: 80vh;
+    justify-items: center;
+    align-content: center;
+  
+
+    .slider-container {
+        overflow: hidden;
+        .slider-wrapper {
+            will-change: translate;
+            display: flex;
+            gap: 10px;
+            
+            transition: translate 300ms;
+            .slider-card {
+                position: relative;
+                min-width: 33%;
+                aspect-ratio: 1 / 1;
+                .info {
+                    transition: opacity 200ms;
+                    position: absolute;
+                    inset: 0;
+                    opacity: 0;
+                    background-image: linear-gradient(45deg, #470bff, #ff01689c);
+
+                     P{
+                        font-size: 1.75rem;
+                     }
+
+                     ul {
+                        li {
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+                     }
+                }
+
+                &:hover {
+                    .info {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .dots-container {
+        li {
+            button {
+                transition: all 200ms;
+                background: none;
+                box-shadow: unset;
+                font-size: 1.5rem;
+                font-style: unset;
+                color: $clr3;
+            }
+            &.active {
+                button {
+                    scale: 2;
+                    color: $clr2;
+                }
+            }
+        }
+    }
+}

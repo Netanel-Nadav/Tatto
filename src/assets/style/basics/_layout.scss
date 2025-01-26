@@ -1,0 +1,26 @@
+.main-container {
+    display: grid;
+    grid-template-columns: $padding 1fr $padding;
+    > * {
+        grid-column: 2;
+
+        &.full {
+            grid-column: 1 /-1;
+        }
+
+    }
+    @include normal-layout {
+        grid-template-columns: 
+            minmax(20px, 1fr)
+            minmax(auto, $normal)
+            minmax(20px, 1fr);
+    }
+    @include wide-layout {
+        grid-template-columns: 
+            minmax(20px, 1fr)
+            minmax(auto, $wide)
+            minmax(20px, 1fr);
+    }
+    
+    
+}

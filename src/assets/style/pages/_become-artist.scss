@@ -1,0 +1,134 @@
+.become-artist {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 15px;
+
+    h1 {
+        margin-bottom: 2rem;
+
+        span {
+            color: $clr3;
+        }
+    }
+
+    form {
+        margin-bottom: 3rem;
+        padding: 10px;
+        background-color: darken($clr1, 5%);
+        margin-top: 3rem;
+        border-radius: 0.75rem;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, .5);
+
+        @include wide-layout {
+            width: 80%;
+            padding: 20px 50px;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background: lighten($clr1, 5%);
+            color: $clr2;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, .5);
+
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid $clr3;
+        }
+
+        select {
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            height: 120px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .file-title {
+            margin-bottom: -15px;
+        }
+
+        .file-holder {
+            padding: 20px 10px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+
+            img {
+                width: 100px;
+            }
+        }
+
+        input[type=file] {
+            display: none;
+        }
+
+        .container {
+            flex-wrap: wrap;
+
+            >* {
+                flex-grow: 1;
+            }
+
+            .wrapper {
+                >* {
+                    flex-grow: 1;
+                }
+            }
+        }
+
+        .holder {
+            flex-direction: column;
+            @include normal-layout {
+                flex-direction: row;
+            }
+        }
+
+
+        .even {
+            @include normal-layout {
+                flex-basis: 50%;
+            }
+        }
+
+        .services-wrapper {
+            span {
+                font-size: 0.750rem;
+                font-style: italic;
+                color: #b4b4b4;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $clr3;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .protfolio-container {
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            width: 30%;
+            padding: 10px 25px;
+            border-radius: 5px;
+            margin-left: auto;
+        }
+    }
+}
