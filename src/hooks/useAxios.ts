@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'http://localhost:3030/api/'
+    baseURL: `${process.env.REACT_APP_BACKEND_URL}/api/`,
+    withCredentials: true
 })
 
 
